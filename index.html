@@ -15,7 +15,7 @@
     <header></header>
     <main class="presentacion">
         <section class="presentacion__contenido__izquierda">
-            <textarea class="presentacion__contenido__caja__texto" autocapitalize="none" name="textarea" id="textoAProcesar" rows="10" cols="5" minlength="1">Ingrese el texto aqui</textarea>
+            <textarea class="presentacion__contenido__caja__texto" autocapitalize="none" name="textarea" id="textoAProcesar" placeholder="Ingrese el texto aqui" rows="10" cols="5" minlength="1" required></textarea>
             <p class="presentacion__contenido__advertencia"><img alt="Signo de advertencia" src="./assets/symbole-d-avertissement-gris.png" width="16px">Solo letras minúsculas y sin acentos</p>
             <section class="presentacion__contenido__botones">
                 <button class="presentacion__contenido__boton" id="encriptar" onclick="encriptar();">Encriptar</button>
@@ -23,7 +23,7 @@
             </section>
         </section>
         <section class="presentacion__contenido__derecha">
-            <textarea class="presentacion__resultado__caja__texto" autocapitalize="none" name="textarea" id="textoResultado" rows="5" cols="30" readonly></textarea>
+            <textarea class="presentacion__resultado__caja__texto" autocapitalize="none" name="textarea" id="textoResultado" readonly hidden></textarea>
             <img class="presentacion__error__imagen" alt="Imagen texto faltante" src="./assets/Muñeco.png" width="70%" id="error">
             <h2 class="presentacion__error_subtitulo" id="error1">Ningún mensaje fue encontrado</h2>
             <p class="presentacion__error_texto" id="error2">Ingrese el texto que desees encriptar o desencriptar</p>

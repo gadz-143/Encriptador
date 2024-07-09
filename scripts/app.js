@@ -18,14 +18,17 @@ function encriptar() {
         }
     }
     document.getElementById('textoResultado').innerHTML=respuesta;
+    document.getElementById('textoResultado').removeAttribute('hidden');
     document.getElementById('copiar').removeAttribute('hidden');
-    document.getElementById('error').style.visibility = 'hidden';
-    document.getElementById('error1').style.visibility = 'hidden';
-    document.getElementById('error2').style.visibility = 'hidden';
+    document.getElementById('textoResultado').setAttribute('row',15)
+    document.getElementById('error').setAttribute('hidden',true);
+    document.getElementById('error1').setAttribute('hidden',true);
+    document.getElementById('error2').setAttribute('hidden',true);
 }
 function desencriptar(params) {
     var texto = ""+document.getElementById('textoAProcesar').value;
     var respuesta = "";
+    var lugarRespuesta = document.getElementById('textoResultado');
     for (let i = 0; i < texto.length; i++) {
         if (texto.substring(i,i+2) == "ai"){
             respuesta = respuesta + "a";
@@ -46,14 +49,19 @@ function desencriptar(params) {
             respuesta = respuesta+texto.substring(i,i+1);
         }
     }
-    document.getElementById('textoResultado').innerHTML=respuesta;
+    lugarRespuesta.innerHTML=respuesta;
+    autoResize(lugarRespuesta);
     document.getElementById('copiar').removeAttribute('hidden');
-    document.getElementById('error').style.visibility = 'hidden';
-    document.getElementById('error1').style.visibility = 'hidden';
-    document.getElementById('error2').style.visibility = 'hidden';
+    document.getElementById('error').setAttribute('hidden',true);
+    document.getElementById('error1').setAttribute('hidden',true);
+    document.getElementById('error2').setAttribute('hidden',true);
 }
 function copiar(){
     var text = document.getElementById('textoResultado').value;
     navigator.clipboard.writeText(text);
     alert("Mensaje copiado con exito!");
+}
+function autoResize(element) {
+    element.style.height = 'auto';
+    element.style.height = element.scrollHeight + 'px';
 }
