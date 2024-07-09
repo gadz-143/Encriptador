@@ -56,11 +56,15 @@ body{
     width: 20.5rem;
     height: 4.1875rem;
 }
-#diferente{
+#encriptar{
     background-color: var(--color-primario);
     color: var(--color-texto-cuaternario);
 }
-#iguales{
+#desencriptar{
+    background-color: var(--color-boton-primario);
+    color: var(--color-primario);
+}
+#copiar{
     background-color: var(--color-boton-primario);
     color: var(--color-primario);
 }

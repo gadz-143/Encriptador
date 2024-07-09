@@ -7,26 +7,27 @@
     <title>Encriptando</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="./scripts/app.js" defer></script>
 </head>
 <body>
     <header></header>
     <main class="presentacion">
         <section class="presentacion__contenido__izquierda">
-            <textarea class="presentacion__contenido__caja__texto" autocapitalize="none" name="textarea" id="textAProcesar" rows="10" cols="5" minlength="1">Ingrese el texto aqui</textarea>
+            <textarea class="presentacion__contenido__caja__texto" autocapitalize="none" name="textarea" id="textoAProcesar" rows="10" cols="5" minlength="1">Ingrese el texto aqui</textarea>
             <p class="presentacion__contenido__advertencia"><img alt="Signo de advertencia" src="./assets/symbole-d-avertissement-gris.png" width="16px">Solo letras minúsculas y sin acentos</p>
             <section class="presentacion__contenido__botones">
-                <button class="presentacion__contenido__boton" id="diferente" onclick="encriptar();">Encriptar</button>
-                <button class="presentacion__contenido__boton" id="iguales" onclick="desencriptar();">Desencriptar</button>
+                <button class="presentacion__contenido__boton" id="encriptar" onclick="encriptar();">Encriptar</button>
+                <button class="presentacion__contenido__boton" id="desencriptar" onclick="desencriptar();">Desencriptar</button>
             </section>
         </section>
         <section class="presentacion__contenido__derecha">
-            <textarea class="presentacion__resultado__caja__texto" autocapitalize="none" name="textarea" id="textAProcesar" rows="5" cols="30" readonly></textarea>
-            <img class="presentacion__error__imagen" alt="Imagen texto faltante" src="./assets/Muñeco.png" width="70%">
-            <h2 class="presentacion__error_subtitulo">Ningún mensaje fue encontrado</h2>
-            <p class="presentacion__error_texto">Ingrese el texto que desees encriptar o desencriptar</p>
-            <button onclick="copiar();" hidden class="presentacion__resultado__boton" id="iguales">Copiar</button>
+            <textarea class="presentacion__resultado__caja__texto" autocapitalize="none" name="textarea" id="textoResultado" rows="5" cols="30" readonly></textarea>
+            <img class="presentacion__error__imagen" alt="Imagen texto faltante" src="./assets/Muñeco.png" width="70%" id="error">
+            <h2 class="presentacion__error_subtitulo" id="error1">Ningún mensaje fue encontrado</h2>
+            <p class="presentacion__error_texto" id="error2">Ingrese el texto que desees encriptar o desencriptar</p>
+            <button onclick="copiar();" hidden class="presentacion__resultado__boton" id="copiar">Copiar</button>
         </section>
     </main>
     <footer class="footer">
